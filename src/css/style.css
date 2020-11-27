@@ -1,3 +1,8 @@
+@import url(font.css);
+* {
+    box-sizing: border-box;
+}
+
 header {
     background-color: #f8f6f6;
 
@@ -8,11 +13,7 @@ header {
     height: 130px;
     margin: auto;
     border: 2px solid green;
-}
-
-.logo {
-    margin-top: 50px;
-
+    padding-top: 30px;
 }
 
 .first_screen {
@@ -20,21 +21,31 @@ header {
     height: 710px;
 }
 
+.logo{
+    border: 2px solid green;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .menu_bar p {
-    font-size: 40px;
-    margin-left: 25px;
+    vertical-align: middle;
+    font-size: 30px;
+    margin:0 0 0 20px;
     font-family: "BigNoodleTitling";
     color: rgb(105, 105, 105);
     text-align: left;
     text-transform: uppercase;
-    display: inline;
+    display: inline-block;
     border: 2px solid green;
+
+
 }
 
 .menu {
+    vertical-align: middle;
     float: right;
-    margin-top: 60px;
-    margin-right: 10px
+    margin-right: 10px;
+    
 }
 
 .creative {
