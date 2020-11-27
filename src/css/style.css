@@ -1,0 +1,57 @@
+header {
+    background-color: #f8f6f6;
+
+}
+
+.menu_bar {
+    width: 1000px;
+    height: 130px;
+    margin: auto;
+    border: 2px solid green;
+}
+
+.logo {
+    margin-top: 50px;
+
+}
+
+.first_screen {
+    background-color: #353535;
+    height: 710px;
+}
+
+.menu_bar p {
+    font-size: 40px;
+    margin-left: 25px;
+    font-family: "BigNoodleTitling";
+    color: rgb(105, 105, 105);
+    text-align: left;
+    text-transform: uppercase;
+    display: inline;
+    border: 2px solid green;
+}
+
+.menu {
+    float: right;
+    margin-top: 60px;
+    margin-right: 10px
+}
+
+.creative {
+    border: 2px solid green;
+    font-size: 72px;
+    font-family: "BigNoodleTitling";
+    color: rgb(214, 213, 213);
+    line-height: 1.2;
+    text-align: center;
+    z-index: 19;
+    text-transform: uppercase;
+    display:inline-block;
+
+}
+.first_screen div {
+    height: 100%;
+    width: 1000px;
+    margin: auto;
+    border: 2px solid green;
+}
