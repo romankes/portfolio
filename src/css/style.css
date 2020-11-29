@@ -1,106 +1,90 @@
 @import url(font.css);
+@font-face {
+    font-family: "BigNoodleTitling"; 
+    src: url("fonts/BigNoodleTitling") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-
+.container {
+    position: relative;
+    width: 1000px;
+    margin: auto;
+}
 header {
+    min-height: 130px;
     background-color: #f8f6f6;
 
 }
-
-.menu_bar {
-    width: 1000px;
-    height: 130px;
-    margin: auto;
-    border: 2px solid green;
-    padding-top: 30px;
-}
-
-.first_screen {
-    background-color: #353535;
-    height: 710px;
-}
-
-.logo{
-    border: 2px solid green;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.menu_bar p {
-    vertical-align: middle;
-    font-size: 30px;
-    margin:0 0 0 20px;
-    font-family: "BigNoodleTitling";
-    color: rgb(105, 105, 105);
-    text-align: left;
-    text-transform: uppercase;
-    display: inline-block;
-    border: 2px solid green;
-
-
-}
-
 .menu {
-    vertical-align: middle;
-    float: right;
-    margin-right: 10px;
-    
+    padding: 50px;
 }
-
-.creative {
-    border: 2px solid green;
-    font-size: 72px;
-    font-family: "BigNoodleTitling";
-    color: rgb(214, 213, 213);
-    line-height: 1.2;
-    text-align: center;
-    z-index: 19;
-    text-transform: uppercase;
-    display:inline-block;
-
-}
-.first_screen div {
-    height: 100%;
-    width: 1000px;
-    margin: auto;
-    border: 2px solid green;
-}
-.top_footer {
-    height: 100px;
-    width: 100%;
-    background-color: rgb(12, 18, 21);
-}
-.map_text {
-    font-size: 30px;
-    font-family: "Impact";
-    color: rgb(214, 213, 213);
-    line-height: 1.2;
-    text-align: center;
-    z-index: 19;
-    text-transform: uppercase;
-    display:inline-block;
-    margin-left: 45%;
-    border: 2px solid green;
-}
-.main_footer{
-    height: 250px;
-    width: 100%;
-    background-color: rgb(23, 31, 35);
-}
-.text_footer{
-    font-family: "BigNoodleTitling";
-    font-size: 25px;
-    margin-left: 45.5%;
-    margin-top:0px;
-    color: rgb(214, 213, 213);
-}
-.logo_foot{
-    border: 2px solid green;
+.menu .menu_img{
     display: inline-block;
-    vertical-align: middle;
-    margin-top: 70px;
-    margin-left: 49%;
-    
+    vertical-align: top;
+    margin-top: 15px;
+    position: absolute;
+    right: 0;
+}
+.menu .menu_text {
+    font-size: 40px;
+    font-family: "BigNoodleTitling";
+    color: rgb(105, 105, 105);    
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+}
+.promo {
+    padding: 150px 0 45px 0;
+    min-height: 710px;
+    text-align: center;
+    background-color: #353535;
+}
+.promo .switche {
+    height: 0;
+    display: inline;
+    font-size: 120px;
+    font-family: "Pe";
+    color: rgb(58, 57, 57);    
+}
+.promo .promo_header {
+    font-size: 78px;
+    font-weight: lighter;
+    font-family: "BigNoodleTitling";
+    color: rgb(214, 213, 213);
+    text-align: center;    
+}
+.promo .promo_subheader {
+    font-size: 26px;
+    font-weight: lighter;
+    font-family: "BigNoodleTitling";
+    color: rgb(214, 213, 213);
+    text-align: center; 
+    margin-top: 20px;
+}
+.promo .scroll{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+.promo .scroll .scroll_discr {
+    font-size: 12px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;  
+    text-transform: uppercase;    
+}
+.promo .scroll .scroll_mouse {
+    display: inline-block;
 }
 
+
+
+
+  
