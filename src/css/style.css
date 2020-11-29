@@ -13,6 +13,7 @@
 .container {
     position: relative;
     width: 1000px;
+    height: 100%;
     margin: auto;
 }
 header {
@@ -40,26 +41,28 @@ header {
     margin-left: 25px;
 }
 .promo {
-    padding: 150px 0 45px 0;
+
+    padding: 200px 0 45px 0;
     min-height: 710px;
     text-align: center;
-    background-color: #353535;
+    background-color: #353531;
 }
-.promo .switche {
-    height: 0;
-    display: inline;
-    font-size: 120px;
-    font-family: "Pe";
-    color: rgb(58, 57, 57);    
+.promo .control {
+    display: flex;
+    justify-content: space-around;
+    min-height: 555px;
 }
-.promo .promo_header {
+.promo .control .switch {
+    margin-top: 100px;
+}
+.promo .control .content .promo_header {
     font-size: 78px;
     font-weight: lighter;
     font-family: "BigNoodleTitling";
     color: rgb(214, 213, 213);
     text-align: center;    
 }
-.promo .promo_subheader {
+.promo .control .content .promo_subheader {
     font-size: 26px;
     font-weight: lighter;
     font-family: "BigNoodleTitling";
@@ -67,12 +70,13 @@ header {
     text-align: center; 
     margin-top: 20px;
 }
-.promo .scroll{
+.promo .control .content .scroll{
     display: inline-block;
     position: absolute;
-    bottom: 0;
+    bottom: 45px;
+    left: 46%
 }
-.promo .scroll .scroll_discr {
+.promo .control .content .scroll .scroll_discr {
     font-size: 12px;
     font-family: "Roboto";
     color: rgb(255, 255, 255);
@@ -80,9 +84,60 @@ header {
     text-align: center;  
     text-transform: uppercase;    
 }
-.promo .scroll .scroll_mouse {
+.promo .control .content .scroll .scroll_mouse {
     display: inline-block;
 }
+.about {
+    padding-top: 100px;
+    min-height: 570px;
+}
+.about .about_header {
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about .about_text {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;
+}  
+.about .about_items {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.about .about_items .about_item {
+    background-color: #ebebeb;
+    width: 320px;
+}
+.about .about_items .about_item .about_disc {
+    margin-top: 25px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(112, 112, 112);
+    line-height: 1.2;     
+}
+.about .about_items .about_item .about_disc span {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Roboto";
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.about .about_items .about_item .about_img {
+    min-height: 57px;
+}
+  
 
 
 
@@ -106,7 +161,7 @@ header {
     display:inline-block;
     border: 2px solid green;
 }
-.main_footer  .last_block{
+.main_footer .last_block{
     width: 275px;
     display:inline-block;
 }
