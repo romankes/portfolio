@@ -87,4 +87,47 @@ header {
 
 
 
+
+
+
+
+
+.top_footer {
+    min-height: 100px;
+    width: 100%;
+    background-color: rgb(12, 18, 21);
+    text-align: center;
+}
+.top_footer .map_text {
+    font-size: 30px;
+    font-family: "Impact";
+    color: rgb(214, 213, 213);
+    text-transform: uppercase;
+    display:inline-block;
+    border: 2px solid green;
+}
+.main_footer  .last_block{
+    width: 275px;
+    display:inline-block;
+}
+.main_footer{
+    min-height: 250px;
+    text-align: center;
+}
+.main_footer .last_block .text_footer{
+    font-family: "BigNoodleTitling";
+    font-size: 25px;
+    margin-top:0px;
+    color: rgb(214, 213, 213);
+}
+.main_footer .last_block .logo_foot{
+    border: 2px solid green;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 70px;
+}
+footer {
+    background-color: rgb(23, 31, 35);
+}
+
   
