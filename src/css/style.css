@@ -222,11 +222,24 @@ header {
     background-color: #1c1c1c;
 }
 .animal .animal_control {
+    min-height: 245px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
-.animal .animal_control .animal_switch {
-    margin-top: 15px;
+
+.animal .animal_control .animal_items {
+    width: 675px;
+    display:flex;
+    justify-content: space-between;
+}
+.animal .animal_control .animal_items .animal_item .animal_disc {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    font-size: 14.694px;
+    font-family: "MgOpenModata";
+    color: #ececec;     
 }
   
 
