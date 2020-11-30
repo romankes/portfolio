@@ -78,7 +78,7 @@ header {
 }
 .promo .control .content .scroll .scroll_discr {
     font-size: 12px;
-    font-family: "Roboto";
+    font-family: "BigNoodleTitling";
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-align: center;  
@@ -253,6 +253,7 @@ header {
     text-transform: uppercase;
     display:inline-block;
     border: 2px solid green;
+    margin-top:27px;
 }
 .main_footer .last_block{
     width: 275px;
@@ -265,7 +266,6 @@ header {
 .main_footer .last_block .text_footer{
     font-family: "BigNoodleTitling";
     font-size: 25px;
-    margin-top:0px;
     color: rgb(214, 213, 213);
 }
 .main_footer .last_block .logo_foot{
@@ -276,6 +276,12 @@ header {
 }
 footer {
     background-color: rgb(23, 31, 35);
+}
+.main_footer .last_block .text_footer2{
+    font-family: "Roboto1";
+    font-size: 20px;
+    color: rgb(214, 213, 213);
+    text-align: center;
 }
 
   
