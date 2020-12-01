@@ -137,8 +137,114 @@ header {
 .about .about_items .about_item .about_img {
     min-height: 57px;
 }
+.video {
+    min-height: 430px;
+    background-color: #171f23;
+}
+.video .video_items {
+    display: flex;
+}
+.video .video_items .video_item {
+    width:50%;
+    min-height: 430px;;
+    text-align: center;  
+    padding: 130px 0 100px 0;
+}
+.video .video_items .video_item .video_header {
+    font-size: 30px;
+    font-family: "Roboto";
+    color: rgb(231, 231, 231);
+    font-weight: bold;  
+    text-transform: uppercase;
+}
+.video .video_items .video_item .video_disc {
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;    
+}
+.video .video_items .video_item .video_play {
+    background-color: rgb(232, 76, 61);
+    width: 127px;
+    height: 35px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Roboto";
+    margin-top: 50px;
+    color: rgb(235, 235, 235);
+    font-weight: bold;   
+    box-shadow: 0px 1px 0px #b51809;
+    border-color:  rgb(232, 76, 61);
+    cursor: pointer;
+    outline: none;  
+}
+.work {
+    padding-top: 80px ;
+    min-height: 840px;
+    text-align: center;
+}
+.work .work_bg {
+    margin-top: 25px;
+    min-height: 525px;
+    background-color: #e84c3d;
+}
+.work .work_header {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);      
+}
+.work .work_text {
+    width: 620px;
+    margin: 0 auto;
+    margin-top: 35px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+}
+.work .work_items {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+.work .work_items .work_item {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.animal {
+    min-height: 245px;
+    background-color: #1c1c1c;
+}
+.animal .animal_control {
+    min-height: 245px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.animal .animal_control .animal_items {
+    width: 675px;
+    display:flex;
+    justify-content: space-between;
+}
+.animal .animal_control .animal_items .animal_item .animal_disc {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    font-size: 14.694px;
+    font-family: "MgOpenModata";
+    color: #ececec;     
+}
   
 
+
+  
 
 
 
