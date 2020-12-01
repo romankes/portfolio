@@ -57,7 +57,7 @@ header {
 }
 .promo .control .content .promo_header {
     font-size: 78px;
-    font-weight: lighter;
+    font-weight:lighter;
     font-family: "BigNoodleTitling";
     color: rgb(214, 213, 213);
     text-align: center;    
@@ -78,7 +78,7 @@ header {
 }
 .promo .control .content .scroll .scroll_discr {
     font-size: 12px;
-    font-family: "BigNoodleTitling";
+    font-family: "Roboto";
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-align: center;  
@@ -145,8 +145,35 @@ header {
 
 
 
-
-
+.Message .send_main{
+    margin-top: 85px;
+    border: 2px solid green;
+    height: 350px;
+}
+ .get_text{ 
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+}
+.Message .send{
+    text-align: center;
+    color: white;   
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    margin-top: 150px;
+    background-color:rgb(246, 118, 75);
+    cursor: pointer;
+    outline: none;
+}
+.Message {
+    height: 700px;
+    background-color: white;
+    border: 2px solid green;
+    text-align: center;
+}
 .top_footer {
     min-height: 100px;
     width: 100%;
@@ -163,7 +190,6 @@ header {
     margin-top:27px;
 }
 .main_footer .last_block{
-    width: 275px;
     display:inline-block;
 }
 .main_footer{
@@ -189,6 +215,9 @@ footer {
     font-size: 20px;
     color: rgb(214, 213, 213);
     text-align: center;
+}
+.main_footer .socials{
+    margin: 0 auto;
 }
 
   
