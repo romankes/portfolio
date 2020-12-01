@@ -247,14 +247,62 @@ header {
   
 
 
+.inscription {
+    font-size: 36px;
+    font-family: "Roboto";
+    color: rgb(246, 246, 246);
+    line-height: 1.2;
+    text-align: center;
+}
+.choose{
+    height:700px;
+    background-color:rgb(21, 31, 35);
+}
+.Message .inf_img{
+    margin-top: 50px;
+    
+}
+.Message .text_field .name_field{
+    width: 50%;
+    height: 50%;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+    
+      
 
+}
+.Message .text_field .mail_field{
+    width: 50%;
+    height: 50%;  
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+}
 
-
-
+.Message .text_field .message_field{
+    height: 50%;
+    width:100% ;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+}
+.Message .text_field{
+    height: 250px;
+    margin-top: 45px;   
+    display:flex; 
+    flex-wrap: wrap;
+}
 .Message .send_main{
     margin-top: 85px;
-    border: 2px solid green;
-    height: 350px;
+    height: 440px;
+    
 }
  .get_text{ 
     font-size: 48px;
@@ -269,7 +317,7 @@ header {
     margin: 0 auto;
     height: 50px;
     width: 200px;
-    margin-top: 150px;
+    margin-top: 60px;
     background-color:rgb(246, 118, 75);
     cursor: pointer;
     outline: none;
@@ -277,8 +325,9 @@ header {
 .Message {
     height: 700px;
     background-color: white;
-    border: 2px solid green;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 .top_footer {
     min-height: 100px;
@@ -292,7 +341,6 @@ header {
     color: rgb(214, 213, 213);
     text-transform: uppercase;
     display:inline-block;
-    border: 2px solid green;
     margin-top:27px;
 }
 .main_footer .last_block{
@@ -308,7 +356,6 @@ header {
     color: rgb(214, 213, 213);
 }
 .main_footer .last_block .logo_foot{
-    border: 2px solid green;
     display: inline-block;
     vertical-align: middle;
     margin-top: 70px;
