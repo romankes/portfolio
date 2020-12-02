@@ -247,20 +247,255 @@ header {
   
 
 
-.inscription {
+
+
+
+
+
+
+
+.skills{
+    height: 815px ;
+    background-color:white ;
+}
+.features{
+    height: 385px ;
+    background-color: rgb(23, 31, 35);
+    display: flex;
+    flex-wrap: wrap;
+}
+.features .name_feature .feature_get{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 50px;
+}
+.features .feature_block{
+    width: 900px;
+    height: 170px;
+    border:1px double rgb(23, 31, 35);;
+    margin-left: 5%;
+    margin: 50px;
+    display: flex;
+}
+.features .feature_block .void{
+    width: 12%;
+    border:1px double rgb(23, 31, 35);;
+}
+
+.features .feature_block .feature_img{
+    font-family: "Roboto";
+    color:rgb(246, 246, 246);
+    text-align: center;
+    width: 20%;
+    border:1px double rgb(23, 31, 35);;
+    display: block;
+}
+.features .feature_block .feature_img .name_features{
+    font-size: 18px ;
+    margin-top: 10px;
+}
+.features .feature_block .feature_img .count{
+    font-size: 48px ;
+    margin-top: 10px;
+}
+.blog{
+    height: 800px;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog .blog_text{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 750px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center; 
+}
+.blog .blog_get{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 75px;
+}
+.blog .blog_field{
+    margin-top: 75px;
+    width: 1050px;
+    height: 420px;
+    border:1px double red;
+    display: flex;
+}
+.blog .blog_field .blog_post{
+    height: 425px;
+    width: 350px;
+    border:10px double red;
+    display: block;
+}
+.blog .blog_field .blog_post .blog_post_text{
+        font-family: "Roboto";
+        color: rgb(121, 121, 121);
+        line-height: 1.2;
+        text-align: left;   
+        border:1px double red;
+        width: 280;
+        height: 150;
+}
+.discript {
     font-size: 36px;
     font-family: "Roboto";
     color: rgb(246, 246, 246);
-    line-height: 1.2;
     text-align: center;
+    
+    margin-top: 50px;
 }
 .choose{
     height:700px;
     background-color:rgb(21, 31, 35);
+    display: flex;
+    flex-wrap: wrap;
 }
-.Message .inf_img{
+.choose .inf_plan{
+    width: 950px;
+    height: 450px;
+    margin-top: 75px;
+    margin-left:3%;
+    border:1px double rgb(21, 31, 35);
+    display: flex;
+}
+.choose .inf_plan .block_info{
+    border:1px double rgb(21, 31, 35);
+    width: 25%;
+}
+.choose .inf_plan .block_info .top_info{
+    border:1px double rgb(21, 31, 35);
+    width: 100%;
+    height: 35%;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    text-align: center;   
+    background-color: rgb(14, 19, 22);
+}
+.choose .inf_plan .block_info .bot_info{
+    border:1px double rgb(21, 31, 35);
+    width: 100%;
+    height: 65%;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    text-align: center;   
+    background-color: rgb(31, 40, 44); 
+    line-height: 2;
+}
+.choose .inf_plan .block_info .bot_info div{
+  margin-top: 50px;
+}
+.choose .inf_plan .block_info .top_info .name_price{  
+    font-size: 14;    
+    margin-top: 40px;    
+}
+.choose .inf_plan .block_info .top_info .price{
+    font-size: 36.328px;
+}
+.choose .inf_plan .block_info .bot_info .purchase{
+    text-align: center;
+    color: white;   
+    margin: 0 auto;
+    height: 35px;
+    width: 125px;
     margin-top: 50px;
+    background-color:rgb(246, 118, 75);
+    background-color: rgb(232, 76, 61);
+    border-color:  rgb(31, 40, 44);;
+    font-weight: bold;  
+    cursor: pointer;
+    outline: none;
+  }
+
+ .get_text{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+}
+.message_input {
+    margin-top: 20px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    width: 90%;
+    display: block;
+}
+.main_input {
+    width: 95%;
+}
+.Message {
+    height: 700px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Message .inf_text{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 750px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;  
+}
+.Message .send{
+    text-align: center;
+    color: white;   
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    margin-top: 60px;
+    background-color:rgb(246, 118, 75);
+    background-color: rgb(232, 76, 61);
+    font-weight: bold;   
+    border-color:  #ffffff;
+    cursor: pointer;
+    outline: none;
+}
+.Message .send_main{
+    margin-top: 85px;
+    height: 440px;
     
+}
+.Message .text_field{
+    height: 250px;
+    margin-top: 45px;   
+    display:flex; 
+    flex-wrap: wrap;
+}
+.Message .text_field .message_field{
+    height: 50%;
+    width:100% ;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+}
+.Message .text_field .mail_field{
+    width: 50%;
+    height: 50%;  
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
 }
 .Message .text_field .name_field{
     width: 50%;
@@ -274,60 +509,9 @@ header {
       
 
 }
-.Message .text_field .mail_field{
-    width: 50%;
-    height: 50%;  
-    font-size: 14px;
-    font-family: "Roboto";
-    color: rgb(105, 105, 105);
-    line-height: 1.2;
-    text-align: left;
-}
-
-.Message .text_field .message_field{
-    height: 50%;
-    width:100% ;
-    font-size: 14px;
-    font-family: "Roboto";
-    color: rgb(105, 105, 105);
-    line-height: 1.2;
-    text-align: left;
-}
-.Message .text_field{
-    height: 250px;
-    margin-top: 45px;   
-    display:flex; 
-    flex-wrap: wrap;
-}
-.Message .send_main{
-    margin-top: 85px;
-    height: 440px;
+.Message .inf_img{
+    margin-top: 50px;
     
-}
- .get_text{ 
-    font-size: 48px;
-    font-family: "BigNoodleTitling";
-    color: rgb(61, 61, 61);
-    line-height: 1.2;
-    text-align: center;
-}
-.Message .send{
-    text-align: center;
-    color: white;   
-    margin: 0 auto;
-    height: 50px;
-    width: 200px;
-    margin-top: 60px;
-    background-color:rgb(246, 118, 75);
-    cursor: pointer;
-    outline: none;
-}
-.Message {
-    height: 700px;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
 }
 .top_footer {
     min-height: 100px;
@@ -364,7 +548,7 @@ footer {
     background-color: rgb(23, 31, 35);
 }
 .main_footer .last_block .text_footer2{
-    font-family: "Roboto1";
+    font-family: "Roboto";
     font-size: 20px;
     color: rgb(214, 213, 213);
     text-align: center;

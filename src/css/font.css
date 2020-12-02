@@ -1,24 +1,24 @@
 @font-face {
     font-family: "BigNoodleTitling"; 
-    src: url("fonts/BigNoodleTitling") format("truetype"); 
+    src: url("../fonts/BigNoodleTitling") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Impact"; 
-    src: url("fonts/Impact") format("truetype"); 
+    src: url("../fonts/Impact") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto"; 
-    src: url("fonts/Roboto") format("truetype"); 
+    src: url("../fonts/Roboto") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto1"; 
-    src: url("fonts/Roboto1") format("truetype"); 
+    src: url("../fonts/Roboto1") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
