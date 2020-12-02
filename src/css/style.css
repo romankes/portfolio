@@ -264,9 +264,15 @@ header {
     height:700px;
     background-color:rgb(21, 31, 35);
 }
-.Message .inf_img{
+.Message .inf_text{
+    margin: 0 auto;
     margin-top: 50px;
-    
+    width: 750px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;  
 }
 .Message .text_field .name_field{
     width: 50%;
@@ -325,6 +331,9 @@ header {
     width: 200px;
     margin-top: 60px;
     background-color:rgb(246, 118, 75);
+    background-color: rgb(232, 76, 61);
+    font-weight: bold;   
+    border-color:  #ffffff;
     cursor: pointer;
     outline: none;
 }

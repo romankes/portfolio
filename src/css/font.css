@@ -1,18 +1,18 @@
 @font-face {
-    font-family: "BigNoodleTitlingCy"; 
-    src: url("../fonts/BigNoodleTitling") format("otf"); 
+    font-family: "BigNoodleTitling"; 
+    src: url("../fonts/big_noodle_titling.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto"; 
-    src: url("../fonts/Roboto") format("truetype"); 
+    src: url("../fonts/Roboto.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto1"; 
-    src: url("../fonts/Roboto1") format("truetype"); 
+    src: url("../fonts/Roboto1.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: normal; 
 } 
