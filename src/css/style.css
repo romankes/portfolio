@@ -50,11 +50,8 @@ header {
 }
 .promo .control .content .promo_header {
     font-size: 78px;
-<<<<<<< HEAD
     font-weight: 100;
-=======
     font-weight:lighter;
->>>>>>> bdb3fe8814ce4dc56a2a0e8743ec1c67eb0c0612
     font-family: "BigNoodleTitling";
     color: rgb(214, 213, 213);
     text-align: center;    
@@ -245,6 +242,17 @@ header {
   
 
 
+.message_input {
+    margin-top: 20px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    width: 90%;
+    display: block;
+}
+.main_input {
+    width: 95%;
+}
 .inscription {
     font-size: 36px;
     font-family: "Roboto";
