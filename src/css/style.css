@@ -326,27 +326,24 @@ header {
     display: block;
 }
 .blog .blog_field .blog_post .blog_post_text{
-    font-family: "Roboto";
-    color: rgb(121, 121, 121);
-    line-height: 1.2;
-    text-align: left;   
-    border:1px double red;
-    width: 280;
-    height: 150;
+        font-family: "Roboto";
+        color: rgb(121, 121, 121);
+        line-height: 1.2;
+        text-align: left;   
+        border:1px double red;
+        width: 280;
+        height: 150;
 }
-
 .choose{
+    padding-top: 50px;
     height:700px;
     background-color:rgb(21, 31, 35);
-    display: flex;
-    flex-wrap: wrap;
 }
 .choose .discript {
     font-size: 36px;
     font-family: "Roboto";
     color: rgb(246, 246, 246);
     text-align: center;
-    margin-top: 50px;
 }
 .choose .inf_plan{
     margin-top: 75px;
@@ -375,19 +372,26 @@ header {
     font-family: "Roboto";
     color: rgb(255, 255, 255);
     text-align: center;   
-    background-color: rgb(31, 40, 44); 
     padding: 35px 0;
+    background-color: rgb(31, 40, 44); 
 }
 .choose .inf_plan .block_info .top_info .name_price{  
-    font-size: 14;     
+    font-size: 14;    
+    display: block; 
 }
 .choose .inf_plan .block_info .top_info .price{
     font-size: 36.328px;
+    margin-top: 10px;
+    display: inline-block; 
+}
+.choose .inf_plan .block_info .bot_info span {
+    line-height: 2.65em;
 }
 .choose .inf_plan .block_info .bot_info .purchase{
     text-align: center;
     color: white;   
     margin: 0 auto;
+    margin-top: 40px;
     height: 35px;
     width: 125px;
     padding-bottom: 35px;
