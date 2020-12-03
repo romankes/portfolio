@@ -1,36 +1,18 @@
 @font-face {
     font-family: "BigNoodleTitling"; 
-<<<<<<< HEAD
-    src: url("../fonts/BigNoodleTitling") format("truetype"); 
-    font-style: normal; 
-    font-weight: normal; 
-} 
-@font-face {
-    font-family: "Impact"; 
-    src: url("../fonts/Impact") format("truetype"); 
-=======
     src: url("../fonts/big_noodle_titling.ttf") format("truetype"); 
->>>>>>> 275f04b6093c2edeb9e6feee1b59c6abc9a4296c
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto"; 
-<<<<<<< HEAD
-    src: url("../fonts/Roboto") format("truetype"); 
-=======
     src: url("../fonts/Roboto.ttf") format("truetype"); 
->>>>>>> 275f04b6093c2edeb9e6feee1b59c6abc9a4296c
     font-style: normal; 
     font-weight: normal; 
 } 
 @font-face {
     font-family: "Roboto1"; 
-<<<<<<< HEAD
-    src: url("../fonts/Roboto1") format("truetype"); 
-=======
     src: url("../fonts/Roboto1.ttf") format("truetype"); 
->>>>>>> 275f04b6093c2edeb9e6feee1b59c6abc9a4296c
     font-style: normal; 
     font-weight: normal; 
 } 
