@@ -310,25 +310,20 @@ header {
 }
 .blog .blog_field{
     margin-top: 75px;
-    width: 1050px;
     height: 420px;
-    border:1px double red;
     display: flex;
+    justify-content: space-around;
 }
 .blog .blog_field .blog_post{
-    height: 425px;
+    min-height: 425px;
     width: 350px;
-    border:10px double red;
     display: block;
 }
 .blog .blog_field .blog_post .blog_post_text{
-        font-family: "Roboto";
-        color: rgb(121, 121, 121);
-        line-height: 1.2;
-        text-align: left;   
-        border:1px double red;
-        width: 280;
-        height: 150;
+    font-family: "Roboto";
+    color: rgb(121, 121, 121);
+    line-height: 1.2;
+    padding: 10px 10px 10px 10px;
 }
 .choose{
     padding-top: 50px;
