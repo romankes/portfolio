@@ -265,7 +265,7 @@ header {
     
 }
 .skills .skill_display .name_skill_main .skill_name{
-    font-size: 25px;
+    font-size: 20px;
     font-family: "Roboto";
     color: rgb(61, 61, 61);
     margin-top: 30px;
@@ -538,7 +538,7 @@ header {
     margin: 0 auto;
     margin-top: 50px;
     width: 750px;
-    font-size: 14px;
+    font-size: 22px;
     font-family: "Roboto";
     color: rgb(105, 105, 105);
     line-height: 1.2;
