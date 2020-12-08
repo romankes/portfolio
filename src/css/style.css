@@ -1,6 +1,9 @@
 .container {
     position: relative;
     height: 100%;
+    width:1000px;
+    margin: 0 auto;
+    box-sizing:border-box;
 }
 header {
     min-height: 130px;
@@ -76,6 +79,7 @@ header {
 .about {
     padding-top: 100px;
     min-height: 570px;
+    padding-bottom: 30px;
 }
 .about .about_header {
     font-size: 48px;
@@ -102,19 +106,20 @@ header {
     text-align: center;
 }
 .about .about_items .about_item {
+    padding: 15px;
     background-color: #ebebeb;
     width: 320px;
 }
 .about .about_items .about_item .about_disc {
     margin-top: 25px;
-    font-size: 14px;
+    font-size: 15px;
     font-family: "Roboto";
     color: rgb(112, 112, 112);
     line-height: 1.2;     
 }
 .about .about_items .about_item .about_disc span {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     font-family: "Roboto";
     color: rgb(112, 112, 112);
     font-weight: bold;
@@ -173,7 +178,7 @@ header {
 }
 .work .work_bg {
     margin-top: 25px;
-    min-height: 525px;
+    min-height: 550px;
     background-color: #e84c3d;
 }
 .work .work_header {
@@ -181,15 +186,6 @@ header {
     font-size: 48px;
     font-family: "BigNoodleTitling";
     color: rgb(61, 61, 61);      
-}
-.work .work_text {
-    width: 620px;
-    margin: 0 auto;
-    margin-top: 35px;
-    font-size: 14px;
-    font-family: "Roboto";
-    color: rgb(105, 105, 105);
-    line-height: 1.2;
 }
 .work .work_items {
     margin-top: 90px;
