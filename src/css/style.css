@@ -409,33 +409,24 @@ header {
     text-align: left; 
     letter-spacing: 1px;
     color: rgb(80, 80, 80);
+    display: block;
 }
 .blog .blog_field .blog_post .blog_post_text .post_info{
     font-size: 14px;
     text-align: left; 
-    color: rgb(121, 121, 121);  
+    color: rgb(121, 121, 121); 
+    display: block;
+    margin-top: 16px; 
 }
-.blog .blog_field .blog_post .blog_post_text .the_end .data_end{
-    display:flex;
-    width: 85px;
-    height: 20px;
+.blog .blog_field .blog_post .blog_post_text .the_end {
     font-size: 12px;
-    text-align: left; 
     color: rgb(121, 121, 121);  
-    padding: 3px;
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
 }
-.blog .blog_field .blog_post .blog_post_text .the_end{
-    display:flex;
-}
-.blog .blog_field .blog_post .blog_post_text .the_end .like_end{
-    display:flex;
-    width: 85px;
-    height: 20px;
-    font-size: 12px;
-    text-align: left; 
-    color: rgb(121, 121, 121);  
-    padding: 3px;
-    padding-left:110px;
+.blog .blog_field .blog_post .blog_post_text .the_end .right .second {
+    margin-left: 5px;
 }
 .choose{
     padding-top: 50px;
