@@ -478,8 +478,11 @@ header {
     margin-top: 10px;
     display: inline-block; 
 }
-.choose .inf_plan .block_info .bot_info span {
+.choose .inf_plan .block_info .bot_info .services {
     line-height: 2.65em;
+    width: 115px;
+    text-align: center;
+    margin: 0 auto;
 }
 .choose .inf_plan .block_info .bot_info .purchase{
     text-align: center;

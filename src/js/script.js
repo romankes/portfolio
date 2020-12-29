@@ -40,17 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     ${this.descr}
                 </div>
             `;
-            console.log(card.innerHTML);
             this.parent.append(card);
         }
     }
 
-    class Blogpost extends Card {
-        constructor(src, alt, title, descr, likeCount, commentCount, data, selector, ...classes) {
-            super(src, alt, title, descr,  selector, ...classes)
-        }
-    }
 
+
+
+        //About Card
 
     new AboutCard(
         'icons/about_us/1.png',
@@ -79,9 +76,103 @@ document.addEventListener('DOMContentLoaded', () => {
         'about_item'
         );
 
+        //Blogpost Card
 
+        class BlogpostCard extends Card {
+            constructor(src, alt, title, descr, likeCount, commentCount, date, selector, ...classes) {
+                super(src, alt, title, descr,  selector, ...classes);
+                this.likeCount = likeCount;
+                this.commentCount = commentCount;
+                this.date = this.dateTransform(date);
+                this.render();
+            }
+    
+            dateTransform(date) {
+                return date.toLocaleString('en-US', {       
+                    year: 'numeric', 
+                    month: 'long',
+                    day: 'numeric'       
+                  });           
+            }
+    
+            render() {
+                const card = document.createElement('div');
+                this.checkClasses(card);
+                card.innerHTML = `           
+                <img src="${this.src}" alt="${this.alt}"></img>
+                <div class="blog_post_text">
+                    <span class="post_main">${this.title}</span>
+                    <span class="post_info">${this.descr}</span>
+                    <div class="the_end">
+                        <div class="left">
+                            <img src="img/blog/time.png"></img>
+                            ${this.date}
+                        </div>
+                        <div class="right">
+                            <img src="img/blog/like.png"></img>
+                            ${this.likeCount}
+                            <img src="img/blog/com.png" class="second"></img>
+                            ${this.commentCount}
+                        </div>                                 
+                    </div>
+                </div>
+                `;            
+                this.parent.append(card);
+            }
+        }
 
+    new BlogpostCard(
+        'img/blog13.png',
+        '1',
+        'Create Creative & Clean',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cupiditate est aut dolores neque, obcaecati expedita ullam vero maiores',
+        25,
+        11,
+        new Date(),
+        '.blog_field',
+        'blog_post'
+    );
 
+    new BlogpostCard(
+        'img/blog.png',
+        '2',
+        'Make A Sleek Break',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cupiditate est aut dolores neque, obcaecati expedita ullam vero maiores',
+        25,
+        11,
+        new Date(),
+        '.blog_field',
+        'blog_post'
+    );
+
+    new BlogpostCard(
+        'img/blog13.png',
+        '1',
+        'Creative Manipulations',
+        'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis cupiditate est aut dolores neque, obcaecati expedita ullam vero maiores',
+        25,
+        11,
+        new Date(),
+        '.blog_field',
+        'blog_post'
+    );
+
+    // Services Card
+
+    class ServiceCard extends Card{
+        constructor(title, descr, price, selector, ...classes) {
+            super( title, descr, selector, ...classes);
+            this.price = price;
+        }
+
+        render() {
+            const card = document.createElement('div');
+            this.checkClasses(card);
+            card.innerHTML = `
+            
+            `;
+        }
+    }
 
 
 
