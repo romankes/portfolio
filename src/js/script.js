@@ -159,22 +159,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Services Card
 
-    class ServiceCard extends Card{
+    class ServiceCard extends Card {
         constructor(title, descr, price, selector, ...classes) {
-            super( title, descr, selector, ...classes);
+            super();
+            this.title = title;
+            this.descr = descr;
+            this.parent = document.querySelector(selector);
             this.price = price;
+            this.classes = classes;
+            this.checkPrice();
+            this.render();
         }
-
+        checkPrice() {
+            if(this.price == 0) {
+                this.price = 'Free';
+            } else {
+                this.price = '$' + this.price;
+            }
+        }
         render() {
             const card = document.createElement('div');
             this.checkClasses(card);
             card.innerHTML = `
-            
+                <div class="top_info">
+                    <span class="name_price">${this.title}</span>
+                    <span class="price">${this.price}</span>
+                </div>
+                <div class="bot_info">
+                    <div class="services">
+                        ${this.descr}                  
+                    </div>
+                    <button class="purchase">Buy</button>
+                </div>               
             `;
+            this.parent.append(card);
         }
     }
 
+    new ServiceCard(
+        'basic',
+        '20 Pages<br>2 GB Storage<br>150 Members<br>2 Contributios',
+        0,
+        '.inf_plan',
+        'block_info'
+    );   
+      
+    new ServiceCard(
+        'standart',
+        '25 Pages<br>10 GB Storage<br>300 Members<br>5 Contributios',
+        24,
+        '.inf_plan',
+        'block_info'
+    ); 
+  
+    new ServiceCard(
+        'premium',
+        '30 Pages<br>20 GB Storage<br>500 Members<br>10 Contributios',
+        40,
+        '.inf_plan',
+        'block_info'
+    ); 
 
+    new ServiceCard(
+        'PROFESSIONAL',
+        '40 Pages<br>40 GB Storage<br>1000 Members<br>20 Contributios',
+        75,
+        '.inf_plan',
+        'block_info'
+    ); 
+
+    // Оформлення сервісу, якщо навести то з'являється бордер
+
+    const servicesCards = document.querySelectorAll('.block_info');
+    const servicsCard = document.querySelector('.block_info');
+    servicsCard.addEventListener('mouseover', (e) => {
+        console.log('HI');
+    });
+
+    servicesCards.forEach(card => {
+        card.addEventListener('mouseover', (e) => {
+            card.classList.add('focus');
+        });
+        card.addEventListener('onmouseout', (e) => {
+            card.classList.remove('focus');
+        });
+    });
 
 
 

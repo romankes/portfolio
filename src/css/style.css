@@ -472,6 +472,7 @@ header {
 .choose .inf_plan .block_info .top_info .name_price{  
     font-size: 14;    
     display: block; 
+    text-transform: uppercase;
 }
 .choose .inf_plan .block_info .top_info .price{
     font-size: 36.328px;
@@ -636,3 +637,11 @@ footer {
 .main_footer .socials{
     margin: 0 auto;
 }
+
+
+ /* ДЛЯ JavaScript */
+
+.focus{
+    border: solid 2px orange;
+}
+
