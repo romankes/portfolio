@@ -231,16 +231,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Оформлення сервісу, якщо навести то з'являється бордер
 
     const servicesCards = document.querySelectorAll('.block_info');
-    const servicsCard = document.querySelector('.block_info');
-    servicsCard.addEventListener('mouseover', (e) => {
-        console.log('HI');
-    });
 
     servicesCards.forEach(card => {
         card.addEventListener('mouseover', (e) => {
             card.classList.add('focus');
         });
-        card.addEventListener('onmouseout', (e) => {
+        card.addEventListener('mouseout', (e) => {
             card.classList.remove('focus');
         });
     });

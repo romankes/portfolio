@@ -282,8 +282,8 @@ header {
     width: 670px;
     background-color: rgb(235, 235, 235);
     padding-top: 125px;
-    padding-left: 65px;
-    padding-right: 65px;
+    padding-left: 40px;
+    padding-right: 40px;
     padding-bottom: 70px;
 }
 .skills .skill_display .skill_info .skill_text{
@@ -299,22 +299,36 @@ header {
         font-family: "Roboto";
         color: rgb(133, 131, 131);
 }
-.skills .skill_display .skill_info .skill_diagram{
+.skills .skill_display .skill_info .skill{
     display:flex; 
+    flex-direction: column;
+    background-color: rgb(235, 235, 235);
 }
-.skills .skill_display .skill_info .skill_diagram .ability{
-        font-size: 14px;
-        font-family: "Roboto";
-        color: rgb(61, 61, 61);   
-        line-height: 2.4;
-}
-.skills .skill_display .skill_info .skill_diagram .ability2{
-    display: block;
-    width: 390px;
-    margin-left: 10px;
-}
-.skills .skill_display .skill_info .skill_diagram .ability2 .hr_ability{
+.skills .skill_display .skill_info .skill .skill_line{
     display: flex;
+    justify-content:space-around;
+}
+.skills .skill_display .skill_info .skill .skill_line .skill_name{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);   
+    margin-right: 30px;
+    width: 15%;
+        
+}
+.skills .skill_display .skill_info .skill .skill_line .hr{
+    display: flex;
+    align-items: center;
+    width: 70%;
+}
+.skills .skill_display .skill_info .skill .skill_line .hr hr{
+    margin-bottom: 15px;
+}
+.skills .skill_display .skill_info .skill .skill_line .skill_count{
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
 }
 .features{
     height: 385px ;
@@ -446,7 +460,7 @@ header {
     justify-content: space-around;
 }
 .choose .inf_plan .block_info{
-    border:1px double rgb(21, 31, 35);
+
     min-height: 450px;
     width: 25%;
 }
