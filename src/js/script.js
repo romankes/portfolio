@@ -241,6 +241,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Обробка повідомлення
+    const textBoxesName = document.querySelector('[data-name]'),
+          textBoxesMail = document.querySelector('[data-mail]'),
+          textBoxesMessage = document.querySelector('[data-message]'),
+          sendMessage = document.querySelector('[data-send]');
+
+    sendMessage.addEventListener('click', () => {
+
+        if(textBoxesName.value != '' && textBoxesMail.value != '' && textBoxesMessage.value != '') {
+            let validMail = false;
+            for (let i = 0; i < textBoxesMail.value.length; i++) {
+                if(textBoxesMail.value[i]  == '@') {
+                    validMail = true;
+                    break;
+                }
+            }
+            if(validMail == true) {
+                const message = `${textBoxesName.value}: ${textBoxesMessage.value}
+                mail:${textBoxesMail.value}`;
+                textBoxesName.value = '';
+                textBoxesMail.value = '';
+                textBoxesMessage.value = '';
+                console.log(message);
+            } else {
+                alert('Емейл не валідний');
+            }
+
+        } else {
+            alert('ВИ, каліка, як так можна, не ввести в текстові поля!');
+        }
+
+    }); 
+
+    // Обробка кліку на workItem
+
+    const workItems = document.querySelectorAll('.work_item');
+
+    workItems.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            workItems.forEach((itemForRemove) => {
+                itemForRemove.classList.remove('changeMenu');
+            });
+            item.classList.add('changeMenu');
+        });
+    });
+
+
+          
+
 
 
 

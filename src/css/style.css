@@ -192,12 +192,15 @@ header {
     display: flex;
     justify-content: space-around;
 }
-.work .work_items .work_item {
+.work .work_items .work_item button {
     font-size: 14px;
     font-family: "Roboto";
     color: rgb(61, 61, 61);
     font-weight: bold;
     text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: white;
 }
 .animal {
     min-height: 245px;
@@ -527,7 +530,9 @@ header {
     border-right: 0px;
     border-left: 0px;
     width: 90%;
+    font-size: 20px;
     display: block;
+    outline:none;
 }
 .main_input {
     width: 95%;
@@ -656,6 +661,11 @@ footer {
  /* ДЛЯ JavaScript */
 
 .focus{
-    border: solid 2px orange;
+    border: solid 2px #f6744b;
+}
+
+.changeMenu{
+    border-bottom: solid 1px #e64e40 ;
+    border-radius: 2px;
 }
 
