@@ -422,14 +422,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    pushAllOnPage()
+    pushAllOnPage();
 
     workItems.forEach((item, i) => {
         item.addEventListener('click', () => {
             switch(i) {
                 case 0: {
                     menu.innerHTML = '';
-                    pushAllOnPage()
+                    pushAllOnPage();
                     break;
                 }
                 case 1: {
@@ -474,8 +474,230 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-   
 
+    //Динамічна секція скілл
+
+    const profileProcessing = {
+        'profile': [],
+        'pushOnPage': function(elem, selector) {
+            document.querySelector(selector).append(elem);
+        },
+        'circleEvent': function() {
+            const circles = [document.querySelector('[data-circle1]'), document.querySelector('[data-circle2]')];
+            let check = false;   
+
+            function getNumImg(src) {
+                for(let i = 0; i < src.length; i++) {
+                    if(i == '1') {
+                        return '1';
+                    }
+                    if(i == '2') {
+                        return '2';
+                    }
+                }               
+            }
+
+            function checkNumOnClickedElement(num) {
+                if(num == 1) {
+                    return '1';
+                }
+                return '2';
+            }
+            function checkNumOnNotClickedElement(num) {
+                if(num == 1) {
+                    return '2';
+                }
+                return '1';
+            }
+
+            circles[0].addEventListener('click', () => {
+                const num = getNumImg(circles[0].querySelector('img').src);
+                circles[0].innerHTML = `
+                <button data-circle1>
+                    <img src="img/Skill/${checkNumOnClickedElement(num)}.png" class="cir"></img>
+                </button>
+                `;
+
+                circles[1].innerHTML = `
+                <button data-circle2>
+                    <img src="img/Skill/${checkNumOnNotClickedElement(num)}.png" class="cir"></img>
+                </button>
+                `;
+                
+            });
+
+
+            circles[1].addEventListener('click', () => {
+                const num = getNumImg(circles[1].querySelector('img').src);
+
+                circles[1].innerHTML = `
+                <button data-circle1>
+                    <img src="img/Skill/${checkNumOnClickedElement(num)}.png" class="cir"></img>
+                </button>
+                `;
+
+                circles[0].innerHTML = `
+                <button data-circle2>
+                    <img src="img/Skill/${checkNumOnNotClickedElement(num)}.png" class="cir"></img>
+                </button>
+                `;
+            });
+
+        } 
+
+    };
+
+    function  checkProfileNumber(number, numProfile) {
+        switch(numProfile) {
+            case 1: {
+                if (number == 1) {
+                    return '1';
+                } else {
+                    return '2';
+                }
+                break;
+            }
+            case 2: {
+                if (number == 2) {
+                    return '1';
+                } else {
+                    return '2';
+                }
+                break;
+            }
+            default: {
+                console.log('Error: Profile failed');
+                break;
+            }
+        }
+    }
+
+    
+
+    class Profile {
+        constructor(nameSurname, avatarSrc, profession, descrSkill, skillCount, numProfile, ...classes) {
+            this.nameSurname = nameSurname;
+            this.avatar = avatarSrc;
+            this.profession = profession;
+            this.descrSkill = descrSkill;
+            this.skillCounts = skillCount;
+            this.classes = classes;
+            this.numProfile = numProfile;
+            this.render();
+        }
+
+        updateProgress() {
+            const parents = document.querySelectorAll('.hr');
+                  
+
+            parents.forEach((parent, i) => {
+                const skillBar = document.createElement('div');
+
+                skillBar.classList.add('progress_bar');
+                skillBar.style.width = `${this.skillCounts[i]}%`;
+                parent.append(skillBar);
+            });
+
+            
+        }
+
+
+        render() {
+            const elem = document.createElement('div');
+
+            this.classes.forEach((className) => {
+                elem.classList.add(className);
+            });            
+
+            elem.innerHTML = `
+                <div class="name_skill">
+                    <div class="name_skill_main">
+                        <div class="avatar_skill">
+                            <img src="${this.avatar}">
+                        </div>
+                        <div class="skill_name">
+                            ${this.nameSurname}
+                        </div>
+                        <div class="work_skill">
+                            ${this.profession}
+                        </div>
+                        <div class="img_social">
+                            <button><img src="img/Social2/1.png"></img></button>
+                            <button><img src="img/Social2/2.png"></img></button>
+                            <button><img src="img/Social2/3.png"></img></button>
+                        </div>
+                        <div class="circle_skill">
+                            <button data-circle1>
+                                <img src="img/Skill/${checkProfileNumber(1, this.numProfile)}.png" class="cir"></img>
+                            </button>
+                            <button data-circle2>
+                                <img src="img/Skill/${checkProfileNumber(2, this.numProfile)}.png" class="cir"></img>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill_info">
+                    <div class="skill_text">
+                        <div class="get_skill">
+                            MY SKILLS
+                        </div>
+                        <div class="bottom-info">
+                            ${this.descrSkill}
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill_line">
+                            <div class="skill_name">PHOTOSHOP</div>
+                            <div class="hr">
+                                
+                            </div> 
+                            <div class="skill_count">${this.skillCounts[0]}%</div>
+                        </div>
+                        <div class="skill_line">
+                            <div class="skill_name">ILLUSTRATOR</div>
+                            <div class="hr">
+                                
+                            </div> 
+                            <div class="skill_count">${this.skillCounts[1]}%</div>
+                        </div>
+                        <div class="skill_line">
+                            <div class="skill_name">SKETCH</div>
+                            <div class="hr">
+                            
+                            </div> 
+                            <div class="skill_count">${this.skillCounts[2]}%</div>
+                        </div>
+
+                        <div class="skill_line">
+                            <span class="skill_name">AFTER EFFECTS</span>
+                            <div class="hr">
+
+                            </div>                         
+                            <div class="skill_count">${this.skillCounts[3]}%</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.querySelector('.skills .container').append(elem);
+            this.updateProgress();
+
+            profileProcessing.profile.push(document.querySelector('.skill_display'));
+            profileProcessing.circleEvent('.circle_skill');
+        }
+    }
+
+    const skillCounts = [88, 92, 90, 98];
+
+    const profile1 = new Profile(
+        'ROSTISLAV MIKHAYLOVSKIY',
+        'img/Skill/circle.png',
+        'DESIGNER AND PROGRAMER',
+        'I have skills in Photoshop and some other design programs. I can machine sites in HTML and CSS. I have a level of junior JavaScript and a libraries React and Redux. ',
+        skillCounts,
+        1,
+        'skill_display'
+    );
+    
 
 
 
