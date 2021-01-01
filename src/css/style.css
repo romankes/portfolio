@@ -44,6 +44,11 @@ header {
 .promo .control .switch {
     margin-top: 100px;
 }
+.promo .control .switch .switcher {
+    outline: none;
+    border: none;
+    background-color: #353531;
+}
 .promo .control .content .scroll{
     display: inline-block;
     position: absolute;
@@ -178,8 +183,17 @@ header {
 }
 .work .work_bg {
     margin-top: 25px;
-    min-height: 550px;
+    min-height: 600px;
     background-color: #e84c3d;
+}
+.work .work_bg .menu_content {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+.work .work_bg .menu_content .menu_item img{
+    width: 320px;
+    height: 200px;
 }
 .work .work_header {
     text-transform: uppercase;
@@ -669,3 +683,7 @@ footer {
     border-radius: 2px;
 }
 
+.menu_item {
+    width: 322px;
+    height: 202px;
+}

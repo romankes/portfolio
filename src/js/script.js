@@ -274,22 +274,207 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }); 
 
+     // Створення запису в галереї
+
+     const menuItemDB = {
+        'allElem': [],
+        'parent': document.querySelector('.menu_content'),
+        'photo': [],
+        'webDesign': [],
+        'brending': [],
+        'mobileApp':[],
+        'pushOnPage': function(elem) {
+            menuItemDB.parent.append(elem);
+        }   
+     };
+
+     class MenuItem {
+        constructor (src, alt, selector, type, ...classes) {
+            this.src = src;
+            this.alt = alt;
+            this.parent = document.querySelector(selector);
+            this.classes = classes;
+            this.type = type;
+            this.render();
+        }
+
+        addElem(elem) {
+            
+            this.classes.forEach(className => {
+                elem.classList.add(className);
+            });
+
+            elem.innerHTML = `
+                <img src="${this.src}" alt="${this.alt}">
+            `;
+            
+            return elem;
+        }
+
+        render() {
+            const elem = document.createElement('div');
+            switch(this.type) {
+                case 1: {                  
+                    menuItemDB.photo.push(this.addElem(elem)); 
+                    menuItemDB.allElem.push(this.addElem(elem));                  
+                    break;
+                }
+                case 2: {
+                    menuItemDB.webDesign.push(this.addElem(elem));
+                    menuItemDB.allElem.push(this.addElem(elem));   
+                    break;
+                }
+                case 3: {                   
+                    menuItemDB.brending.push(this.addElem(elem));
+                    menuItemDB.allElem.push(this.addElem(elem));  
+                    break;
+                }
+                case 4: {                   
+                    menuItemDB.mobileApp.push(this.addElem(elem));
+                    menuItemDB.allElem.push(this.addElem(elem));   
+                    break;
+                }
+                default: {
+                    console.log('Error: This type can not be find');
+                }
+            }
+        }
+    }
+          
+    const item1 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        1,
+        'menu_item'
+    );
+    const item2 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        2,
+        'menu_item'
+    );
+    const item3 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        3,
+        'menu_item'
+    );
+    const item4 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        4,
+        'menu_item'
+    );
+    const item5 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        1,
+        'menu_item'
+    );
+    const item6 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        2,
+        'menu_item'
+    );
+    const item7 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        2,
+        'menu_item'
+    );
+    const item8 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        3,
+        'menu_item'
+    );
+
+    const item9 = new MenuItem(
+        'img/blog13.png',
+        '2',
+        '.menu_content',
+        4,
+        'menu_item'
+    );
+  
+  
+  
+  
+
+
     // Обробка кліку на workItem
 
     const workItems = document.querySelectorAll('.work_item');
+    const menu = document.querySelector('.menu_content');
+
+    function pushAllOnPage() {
+        menuItemDB.allElem.forEach((item) => {
+            menuItemDB.pushOnPage(item);
+        });
+    }
+
+    pushAllOnPage()
 
     workItems.forEach((item, i) => {
         item.addEventListener('click', () => {
+            switch(i) {
+                case 0: {
+                    menu.innerHTML = '';
+                    pushAllOnPage()
+                    break;
+                }
+                case 1: {
+                    menu.innerHTML = '';
+                    menuItemDB.photo.forEach((item) => {
+                        menuItemDB.pushOnPage(item);
+                    });
+                    break;
+                }
+                case 2: {
+                    menu.innerHTML = '';
+                    menuItemDB.webDesign.forEach((item) => {
+                        menuItemDB.pushOnPage(item);
+                    });
+                    break;
+                }
+                case 3: {
+                    menu.innerHTML = '';
+                    menuItemDB.brending.forEach((item) => {
+                        menuItemDB.pushOnPage(item);
+                    });
+                    break;
+                }
+                case 4: {
+                    menu.innerHTML = '';
+                    menuItemDB.mobileApp.forEach((item) => {
+                        menuItemDB.pushOnPage(item);
+                    });
+                    break;
+                }
+                default: {
+                    console.log('Error: This type can not be find');
+                }
+            }
+
             workItems.forEach((itemForRemove) => {
                 itemForRemove.classList.remove('changeMenu');
             });
             item.classList.add('changeMenu');
+
+
         });
     });
 
-
-          
-
+   
 
 
 
