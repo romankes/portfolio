@@ -242,6 +242,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Обробка повідомлення
+
+    /*Зробити відправку на сервер */
+
     const textBoxesName = document.querySelector('[data-name]'),
           textBoxesMail = document.querySelector('[data-mail]'),
           textBoxesMessage = document.querySelector('[data-message]'),
@@ -275,6 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }); 
 
      // Створення запису в галереї
+
+     /*Згодом переробити для баз даних*/ 
 
      const menuItemDB = {
         'allElem': [],
@@ -477,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Динамічна секція скілл
 
-    /* Доробити можливість переключення між профілями, перемикання кружечків готове */ 
+    /* Додати анімацію*/ 
 
 
    

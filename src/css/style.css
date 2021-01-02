@@ -290,6 +290,7 @@ header {
     padding-right: 100px;
     padding-top: 70px;
     text-align: center;
+    user-select: none;
 }
 .skills .skill_display .name_skill_main {
     display: block;
@@ -302,11 +303,13 @@ header {
     color: rgb(61, 61, 61);
     margin-top: 30px;
     text-transform: uppercase;
+    user-select: text;
 }
 .skills .skill_display .name_skill_main .work_skill{
     font-size: 14px;
     font-family: "Roboto";
     color: rgb(61, 61, 61);  
+    user-select: text;
 }
 .skills .skill_display .name_skill_main .img_social{
     margin-top: 25px;
@@ -315,11 +318,16 @@ header {
     outline: none;
     border: none;
     background-color: #dcdcdc;
+    margin-right: 2px;
+    width: 17px;
+    height: 17px;
 }
 .skills .skill_display .name_skill_main .circle_skill button {
     outline: none;
     border: none;
     background-color:  #dcdcdc; 
+    padding: 0;
+    margin-right: 5px;
 }
 .skills .skill_display .skill_info{
     min-height: 430px;
@@ -329,6 +337,7 @@ header {
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 70px;
+    user-select: none;
 }
 .skills .skill_display .skill_info .skill_text{
     text-align: left;  
@@ -345,6 +354,7 @@ header {
     font-size: 14px;
     font-family: "Roboto";
     color: rgb(133, 131, 131);
+    user-select: text;
 }
 .skills .skill_display .skill_info .skill{
     margin-top: 10px;
@@ -419,10 +429,15 @@ header {
     width: 20%;
     border:1px double rgb(23, 31, 35);;
     display: block;
+    user-select: none;
+}
+.features .feature_block .feature_img img {
+    height: 56px;
 }
 .features .feature_block .feature_img .name_features{
     font-size: 18px ;
     margin-top: 10px;
+    user-select: text;
 }
 .features .feature_block .feature_img .count{
     font-size: 48px ;
@@ -463,6 +478,7 @@ header {
     min-height: 425px;
     width: 350px;
     display: block;
+    user-select: none;
 }
 .blog .blog_field .blog_post .blog_post_text{
     font-family: "Roboto";
@@ -479,13 +495,21 @@ header {
     letter-spacing: 1px;
     color: rgb(80, 80, 80);
     display: block;
+    user-select: text;
 }
 .blog .blog_field .blog_post .blog_post_text .post_info{
     font-size: 14px;
     text-align: left; 
     color: rgb(121, 121, 121); 
     display: block;
-    margin-top: 16px; 
+    margin-top: 16px;
+    user-select: text;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end .left {
+    user-select: text;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end .left img{
+    user-select: none;
 }
 .blog .blog_field .blog_post .blog_post_text .the_end {
     font-size: 12px;
@@ -515,7 +539,7 @@ header {
     justify-content: space-around;
 }
 .choose .inf_plan .block_info{
-
+    user-select: none;
     min-height: 450px;
     width: 25%;
 }
@@ -619,6 +643,7 @@ header {
     border-color:  #ffffff;
     cursor: pointer;
     outline: none;
+    user-select: none;
 }
 .Message .send_main{
     margin-top: 85px;
@@ -634,7 +659,7 @@ header {
 .Message .text_field .message_field{
     height: 50%;
     width:100% ;
-    font-size: 14px;
+    font-size: 18px;
     font-family: "Roboto";
     color: rgb(105, 105, 105);
     line-height: 1.2;
@@ -643,7 +668,7 @@ header {
 .Message .text_field .mail_field{
     width: 50%;
     height: 50%;  
-    font-size: 14px;
+    font-size: 17px;
     font-family: "Roboto";
     color: rgb(105, 105, 105);
     line-height: 1.2;
@@ -652,7 +677,7 @@ header {
 .Message .text_field .name_field{
     width: 50%;
     height: 50%;
-    font-size: 14px;
+    font-size: 17px;
     font-family: "Roboto";
     color: rgb(105, 105, 105);
     line-height: 1.2;
@@ -695,6 +720,7 @@ header {
     display: inline-block;
     vertical-align: middle;
     margin-top: 70px;
+    user-select: none;
 }
 footer {
     background-color: rgb(23, 31, 35);
@@ -707,8 +733,17 @@ footer {
 }
 .main_footer .socials{
     margin: 0 auto;
+    user-select: none;
 }
-
+.main_footer .socials button{
+    border: none;
+    outline: none;
+    background-color: rgb(23, 31, 35);
+    height:14px;
+    width: 14px;
+    margin-right: 3px;
+    
+}
 
  /* ДЛЯ JavaScript */
 
