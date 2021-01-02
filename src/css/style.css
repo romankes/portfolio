@@ -285,7 +285,7 @@ header {
 .skills .skill_display .name_skill{
     min-height: 430px;
     width: 320px;
-    background-color: rgb(235, 235, 235);
+    background-color: #dcdcdc;
     padding-left: 90px;
     padding-right: 100px;
     padding-top: 70px;
@@ -314,20 +314,17 @@ header {
 .skills .skill_display .name_skill_main .img_social button {
     outline: none;
     border: none;
-    background-color: rgb(235, 235, 235);
-}
-.skills .skill_display .name_skill_main .circle_skill .cir{
-    padding: 5px;
+    background-color: #dcdcdc;
 }
 .skills .skill_display .name_skill_main .circle_skill button {
     outline: none;
     border: none;
-    background-color: rgb(235, 235, 235); 
+    background-color:  #dcdcdc; 
 }
 .skills .skill_display .skill_info{
     min-height: 430px;
     width: 670px;
-    background-color: rgb(235, 235, 235);
+    background-color:  #dcdcdc;
     padding-top: 125px;
     padding-left: 40px;
     padding-right: 40px;
@@ -343,6 +340,7 @@ header {
     color: rgb(61, 61, 61);
 }
 .skills .skill_display .skill_info .skill_text .bottom-info{
+    min-height: 60px;
     margin-top: 10px;
     font-size: 14px;
     font-family: "Roboto";
@@ -352,7 +350,7 @@ header {
     margin-top: 10px;
     display:flex; 
     flex-direction: column;
-    background-color: rgb(235, 235, 235);
+    background-color:  #dcdcdc;
 }
 .skills .skill_display .skill_info .skill .skill_line{
     margin-top: 10px;
@@ -714,6 +712,17 @@ footer {
 
  /* ДЛЯ JavaScript */
 
+ .circle{
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+ }
+ .circleActive {
+    background-color: #957e7d;
+    border: 1px solid #957e7d;
+ }
 .focus{
     border: solid 2px #f6744b;
 }
