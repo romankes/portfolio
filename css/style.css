@@ -1,0 +1,830 @@
+.container {
+    position: relative;
+    height: 100%;
+    width:1000px;
+    margin: 0 auto;
+    box-sizing:border-box;
+}
+header {
+    min-height: 130px;
+    background-color: #f8f6f6;
+
+}
+.menu {
+    padding: 50px;
+    user-select: none;
+}
+.menu .menu_img{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    position: absolute;
+    right: 0;
+}
+.menu .menu_text {
+    font-size: 40px;
+    font-family: "BigNoodleTitling";
+    color: rgb(105, 105, 105);    
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 25px;
+    user-select: text;
+}
+.promo {
+
+    padding: 200px 0 45px 0;
+    min-height: 710px;
+    text-align: center;
+    background-color: #353531;
+}
+.promo .control {
+    display: flex;
+    justify-content: space-around;
+    min-height: 555px;
+}
+.promo .control .switch {
+    margin-top: 100px;
+}
+.promo .control .switch .switcher {
+    user-select: none;
+    outline: none;
+    border: none;
+    background-color: #353531;
+}
+.promo .control .content .scroll{
+    display: inline-block;
+    position: absolute;
+    bottom: 45px;
+    left: 46%;
+    user-select: none;
+}
+.promo .control .content .promo_header {
+    font-size: 78px;
+    font-weight:lighter;
+    font-family: "BigNoodleTitling";
+    color: rgb(214, 213, 213);
+    text-align: center;    
+}
+.promo .control .content .promo_subheader {
+    font-size: 26px;
+    font-weight: lighter;
+    font-family: "BigNoodleTitling";
+    color: rgb(214, 213, 213);
+    text-align: center; 
+    margin-top: 20px;
+}
+.promo .control .content .scroll .scroll_discr {
+    font-size: 12px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-align: center;  
+    text-transform: uppercase;    
+}
+.promo .control .content .scroll .scroll_mouse {
+    display: inline-block;
+}
+.about {
+    padding-top: 100px;
+    min-height: 570px;
+    padding-bottom: 30px;
+}
+.about .about_header {
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+}
+.about .about_text {
+    width: 750px;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;
+}  
+.about .about_items {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.about .about_items .about_item {
+    padding: 15px;
+    background-color: #ebebeb;
+    width: 320px;
+}
+.about .about_items .about_item .about_disc {
+    margin-top: 25px;
+    font-size: 15px;
+    font-family: "Roboto";
+    color: rgb(112, 112, 112);
+    line-height: 1.2;     
+}
+.about .about_items .about_item .about_disc span {
+    text-align: center;
+    font-size: 16px;
+    font-family: "Roboto";
+    color: rgb(112, 112, 112);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.about .about_items .about_item .about_img {
+    min-height: 57px;
+    user-select: none;
+}
+.video {
+    min-height: 430px;
+    background-color: #171f23;
+}
+.video .video_items {
+    display: flex;
+}
+.video .video_items .video_item {
+    width:50%;
+    min-height: 430px;;
+    text-align: center;  
+    padding: 130px 0 100px 0;
+}
+.video .video_items .video_item .video_header {
+    font-size: 30px;
+    font-family: "Roboto";
+    color: rgb(231, 231, 231);
+    font-weight: bold;  
+    text-transform: uppercase;
+}
+.video .video_items .video_item .video_disc {
+    margin-top: 30px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;    
+}
+.video .video_items .video_item .video_play {
+    background-color: rgb(232, 76, 61);
+    width: 127px;
+    height: 35px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Roboto";
+    margin-top: 50px;
+    color: rgb(235, 235, 235);
+    font-weight: bold;   
+    box-shadow: 0px 1px 0px #b51809;
+    border-color:  rgb(232, 76, 61);
+    cursor: pointer;
+    outline: none;  
+    user-select: none;
+}
+.work {
+    padding-top: 80px ;
+    min-height: 840px;
+    text-align: center;
+}
+.work .work_bg {
+    margin-top: 25px;
+    min-height: 600px;
+    background-color: #e84c3d;
+}
+.work .work_bg .menu_content {
+    display: flex;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+.work .work_bg .menu_content .menu_item img{
+    width: 320px;
+    height: 200px;
+    user-select: none;
+}
+.work .work_header {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);      
+}
+.work .work_items {
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+.work .work_items .work_item button {
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    background-color: white;
+    user-select: none;
+}
+.animal {
+    min-height: 245px;
+    background-color: #1c1c1c;
+}
+.animal .animal_control {
+    min-height: 245px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    user-select: none;
+}
+
+.animal .animal_control .animal_items {
+    width: 675px;
+    display:flex;
+    justify-content: space-between;
+}
+.animal .animal_control .animal_items .animal_item .animal_disc {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    font-size: 14.694px;
+    font-family: "MgOpenModata";
+    color: #ececec;  
+    user-select: text;   
+}
+.animal .animal_control .animal_switch {
+    margin-bottom: 15px;
+}
+.animal .animal_control .animal_switch button{
+    outline: none;
+    background-color: #1c1c1c;
+    border:none;
+}
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+.skills{
+    height: 815px ;
+    background-color:white ; 
+}
+
+.skills .skill_display{
+    padding-top: 275px; 
+    display: flex;
+    justify-content: space-between;
+    width: 1015px;
+}
+.skills .skill_display .name_skill{
+    min-height: 430px;
+    width: 320px;
+    background-color: #dcdcdc;
+    padding-left: 90px;
+    padding-right: 100px;
+    padding-top: 70px;
+    text-align: center;
+    user-select: none;
+}
+.skills .skill_display .name_skill_main {
+    display: block;
+    
+}
+.skills .skill_display .name_skill_main .skill_name{
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
+    margin-top: 30px;
+    text-transform: uppercase;
+    user-select: text;
+}
+.skills .skill_display .name_skill_main .work_skill{
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);  
+    user-select: text;
+}
+.skills .skill_display .name_skill_main .img_social{
+    margin-top: 25px;
+}
+.skills .skill_display .name_skill_main .img_social button {
+    outline: none;
+    border: none;
+    background-color: #dcdcdc;
+    margin-right: 2px;
+    width: 17px;
+    height: 17px;
+}
+.skills .skill_display .name_skill_main .circle_skill button {
+    outline: none;
+    border: none;
+    background-color:  #dcdcdc; 
+    padding: 0;
+    margin-right: 5px;
+}
+.skills .skill_display .skill_info{
+    min-height: 430px;
+    width: 670px;
+    background-color:  #dcdcdc;
+    padding-top: 125px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 70px;
+    user-select: none;
+}
+.skills .skill_display .skill_info .skill_text{
+    text-align: left;  
+}
+.skills .skill_display .skill_info .skill_text .get_skill{
+    font-weight: bold;
+    font-size: 24px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
+}
+.skills .skill_display .skill_info .skill_text .bottom-info{
+    min-height: 60px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(133, 131, 131);
+    user-select: text;
+}
+.skills .skill_display .skill_info .skill{
+    margin-top: 10px;
+    display:flex; 
+    flex-direction: column;
+    background-color:  #dcdcdc;
+}
+.skills .skill_display .skill_info .skill .skill_line{
+    margin-top: 10px;
+    display: flex;
+    justify-content:space-around;
+}
+.skills .skill_display .skill_info .skill .skill_line .skill_name{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);   
+    margin-right: 30px;
+    width: 15%;
+        
+}
+.skills .skill_display .skill_info .skill .skill_line .hr{
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 2px;
+    margin-top: 10px;
+    background-color:whitesmoke;
+}
+.skills .skill_display .skill_info .skill .skill_line .hr .progress_bar{
+    background: orange;
+    height: 100%;
+    width: 88%;
+    
+}
+.skills .skill_display .skill_info .skill .skill_line .skill_count{
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(61, 61, 61);
+}
+.features{
+    height: 385px ;
+    background-color: rgb(23, 31, 35);
+    display: flex;
+    flex-wrap: wrap;
+}
+.features .name_feature .feature_get{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 50px;
+}
+.features .feature_block{
+    width: 900px;
+    height: 170px;
+    border:1px double rgb(23, 31, 35);;
+    margin-left: 5%;
+    margin: 50px;
+    display: flex;
+}
+.features .feature_block .void{
+    width: 12%;
+    border:1px double rgb(23, 31, 35);;
+}
+
+.features .feature_block .feature_img{
+    font-family: "Roboto";
+    color:rgb(246, 246, 246);
+    text-align: center;
+    width: 20%;
+    border:1px double rgb(23, 31, 35);;
+    display: block;
+    user-select: none;
+}
+.features .feature_block .feature_img img {
+    height: 56px;
+}
+.features .feature_block .feature_img .name_features{
+    font-size: 18px ;
+    margin-top: 10px;
+    user-select: text;
+}
+.features .feature_block .feature_img .count{
+    font-size: 48px ;
+    margin-top: 10px;
+}
+.blog{
+    height: 800px;
+    background-color:white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog .blog_text{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 750px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center; 
+}
+.blog .blog_get{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+    margin-top: 75px;
+}
+.blog .blog_field{
+    margin-top: 75px;
+    height: 420px;
+    display: flex;
+    justify-content: space-around;
+}
+.blog .blog_field .blog_post{
+    min-height: 425px;
+    width: 350px;
+    display: block;
+    user-select: none;
+}
+.blog .blog_field .blog_post .blog_post_text{
+    font-family: "Roboto";
+    padding: 40px 40px 20px 40px;
+    line-height: 1.4;
+    background-color: rgb(235, 235, 235);
+    min-height: 210px;
+    width: 320px;
+    margin-left: 15px;
+}
+.blog .blog_field .blog_post .blog_post_text .post_main{
+    font-size: 22px;
+    text-align: left; 
+    letter-spacing: 1px;
+    color: rgb(80, 80, 80);
+    display: block;
+    user-select: text;
+}
+.blog .blog_field .blog_post .blog_post_text .post_info{
+    font-size: 14px;
+    text-align: left; 
+    color: rgb(121, 121, 121); 
+    display: block;
+    margin-top: 16px;
+    user-select: text;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end .left {
+    user-select: text;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end .left img{
+    user-select: none;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end {
+    font-size: 12px;
+    color: rgb(121, 121, 121);  
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+.blog .blog_field .blog_post .blog_post_text .the_end .right .second {
+    margin-left: 5px;
+}
+.choose{
+    padding-top: 50px;
+    height:700px;
+    background-color:rgb(21, 31, 35);
+}
+.choose .discript {
+    font-size: 36px;
+    font-family: "Roboto";
+    color: rgb(246, 246, 246);
+    text-align: center;
+}
+.choose .inf_plan{
+    margin-top: 75px;
+    border:1px double rgb(21, 31, 35);
+    display: flex;
+    justify-content: space-around;
+}
+.choose .inf_plan .block_info{
+    user-select: none;
+    min-height: 450px;
+    width: 25%;
+}
+.choose .inf_plan .block_info .top_info{
+    border:1px double rgb(21, 31, 35);
+    height: 35%;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    text-align: center;   
+    background-color: rgb(14, 19, 22);
+    padding-top: 40px;
+}
+.choose .inf_plan .block_info .bot_info{
+    border:1px double rgb(21, 31, 35);
+    height: 65%;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(255, 255, 255);
+    text-align: center;   
+    padding: 35px 0;
+    background-color: rgb(31, 40, 44); 
+}
+.choose .inf_plan .block_info .top_info .name_price{  
+    font-size: 14;    
+    display: block; 
+    text-transform: uppercase;
+}
+.choose .inf_plan .block_info .top_info .price{
+    font-size: 36.328px;
+    margin-top: 10px;
+    display: inline-block; 
+}
+.choose .inf_plan .block_info .bot_info .services {
+    line-height: 2.65em;
+    width: 115px;
+    text-align: center;
+    margin: 0 auto;
+}
+.choose .inf_plan .block_info .bot_info .purchase{
+    text-align: center;
+    color: white;   
+    margin: 0 auto;
+    margin-top: 40px;
+    height: 40px;
+    width: 125px;
+    background-color:rgb(246, 118, 75);
+    background-color: rgb(232, 76, 61);
+    border-color:  rgb(31, 40, 44);;
+    font-weight: bold;  
+    cursor: pointer;
+    outline: none;
+  }
+
+ .get_text{
+    font-size: 48px;
+    font-family: "BigNoodleTitling";
+    color: rgb(61, 61, 61);
+    line-height: 1.2;
+    text-align: center;
+}
+.message_input {
+    margin-top: 20px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    width: 90%;
+    font-size: 20px;
+    display: block;
+    outline:none;
+}
+.main_input {
+    width: 95%;
+}
+.Message {
+    height: 700px;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Message .inf_text{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 750px;
+    font-size: 22px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: center;  
+}
+.Message .send{
+    text-align: center;
+    color: white;   
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    margin-top: 40px;
+    background-color:rgb(246, 118, 75);
+    background-color: rgb(232, 76, 61);
+    font-weight: bold;   
+    border-color:  #ffffff;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+.Message .send_main{
+    margin-top: 85px;
+    height: 440px;
+    
+}
+.Message .form{
+    height: 250px;
+    margin-top: 45px;   
+    display:flex; 
+    flex-wrap: wrap;
+}
+.Message .form .message_field{
+    height: 50%;
+    width:100% ;
+    font-size: 18px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+}
+.Message .form .mail_field{
+    width: 50%;
+    height: 50%;  
+    font-size: 17px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+}
+.Message .form .name_field{
+    width: 50%;
+    height: 50%;
+    font-size: 17px;
+    font-family: "Roboto";
+    color: rgb(105, 105, 105);
+    line-height: 1.2;
+    text-align: left;
+    
+      
+
+}
+.Message .inf_img{
+    margin-top: 50px;
+    
+}
+.top_footer {
+    min-height: 100px;
+    width: 100%;
+    background-color: rgb(12, 18, 21);
+    text-align: center;
+}
+.top_footer .map_text {
+    font-size: 30px;
+    font-family: "Impact";
+    color: rgb(214, 213, 213);
+    text-transform: uppercase;
+    display:inline-block;
+    margin-top:27px;
+}
+.main_footer .last_block{
+    display:inline-block;
+}
+.main_footer{
+    min-height: 250px;
+    text-align: center;
+}
+.main_footer .last_block .text_footer{
+    font-family: "BigNoodleTitling";
+    font-size: 25px;
+    color: rgb(214, 213, 213);
+}
+.main_footer .last_block .logo_foot{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 70px;
+    user-select: none;
+}
+footer {
+    background-color: rgb(23, 31, 35);
+}
+.main_footer .last_block .text_footer2{
+    font-family: "Roboto";
+    font-size: 20px;
+    color: rgb(214, 213, 213);
+    text-align: center;
+}
+.main_footer .socials{
+    margin: 0 auto;
+    user-select: none;
+}
+.main_footer .socials button{
+    border: none;
+    outline: none;
+    background-color: rgb(23, 31, 35);
+    height:14px;
+    width: 14px;
+    margin-right: 3px;
+    
+}
+
+ /* ДЛЯ JavaScript */
+
+ .circle{
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+ }
+ .circleActive {
+    background-color: #957e7d;
+    border: 1px solid #957e7d;
+ }
+.focus{
+    border: solid 2px #f6744b;
+}
+
+.changeMenu{
+    border-bottom: solid 1px #e64e40 ;
+    border-radius: 2px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_item {
+    width: 322px;
+    height: 202px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
+.modal{
+    user-select: none;
+    position:fixed;
+    top:0;
+    left:0;
+    padding: 100px;
+    z-index:1050;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background-color:rgba(0,0,0,.5);
+}
+.modal .modal__dialog{
+    max-width:500px;
+    margin:40px auto;
+}
+.modal .modal__dialog .modal__content {
+    position:relative;
+    width:100%;
+    padding:40px;
+    background-color:rgba(31, 30, 30, 0.952);
+    border:1px solid rgba(0,0,0,.2);
+    border-radius:4px;
+    max-height:80vh;
+    overflow-y:auto;
+}
+.modal .modal__dialog .modal__content .modal__close{
+    position:absolute;
+    top:8px;
+    right:14px;
+    font-size:30px;
+    color:rgb(250, 250, 250);
+    opacity:.5;
+    font-weight:700;
+    border:none;
+    background-color:transparent;
+    cursor:pointer
+}
+.modal .modal__dialog .modal__content .modal__title {
+    color:rgb(250, 250, 250);
+    text-align:center;
+    font-size:22px;
+    text-transform:uppercase;
+}
+.img_loading {
+    display: block;
+    margin: 0 auto;
+}
