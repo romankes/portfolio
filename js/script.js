@@ -233,148 +233,164 @@ document.addEventListener('DOMContentLoaded', () => {
         '.inf_plan',
         'block_info'
     ); 
+     //Модальне вікно, відправлення замовлення на сервер
 
-    // Оформлення сервісу, якщо навести то з'являється бордер
+     const message = {
+        loading: 'img/form/Rolling-1s-200px.svg',
+        success: 'Thank you. We will reply as soon as possible',
+        failure: 'Error...'
+    };
 
-    const servicesCards = document.querySelectorAll('.block_info');
+    function showModal(modal) {
+        modal.classList.remove('hide');
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal(modal) {
+        modal.classList.remove('show');
+        modal.classList.add('hide');
+        document.body.style.overflow = '';
+    }
+    function removeResultsModal() {
+        const dialogs = document.querySelectorAll('.modal__dialog');
+        dialogs.forEach(dialog => {
+            if(!(dialog.classList.contains('hide'))) {
+                dialog.remove();
+            }
+        });
+    }
+
+    function addEventCloseModal(modal) {       
+        modal.addEventListener('click', (e) => {
+            if(e.target == modal || e.target.getAttribute('data-close') == '' ) {    
+                const dialogs = modal.querySelectorAll('.modal__dialog');
+                if(dialogs.length > 1) {
+                    removeResultsModal();                 
+                }  
+                closeModal(modal);         
+                const prevModal = modal.querySelector('.modal__dialog');
+                if(prevModal.classList.contains('hide')) {
+                    prevModal.classList.remove('hide');
+                }
+                prevModal.querySelector('form').reset();                     
+            }
+        });        
+    }
+
+    function send(form, serviceTitle) {
+        const prevModal = document.querySelector('.modal__dialog'); 
+
+        prevModal.classList.add('hide');
+
+        showResultModal(message.loading, prevModal);
+
+        if(serviceTitle == undefined) {
+            serviceTitle = null;
+        }
+
+        const formData = new FormData(form),
+              object = getObject(serviceTitle);
+             
+        function getObject(serviceTitle ) {
+           if(serviceTitle != null) {
+            return {
+                'serviceName': serviceTitle
+            };
+            } else {
+                return {};
+            } 
+        }       
+        
+        formData.forEach((value, key) => {
+            object[key] = value;
+        });
+
+        fetch('server.php',{
+            method:'POST',
+            headers: {
+                'Content-type': 'application/json; charset=utf-8'
+            },
+            body: JSON.stringify(object)
+        }).then(data => {
+            console.log(data.text());
+            showResultModal(message.success, prevModal);
+        }).catch(() => {
+            showResultModal(message.failure, prevModal);
+        }).finally(() => form.reset());
+
+    }
+
+    function showResultModal(answer) {
+        const resultModal = document.createElement('div'),
+              modal = document.querySelector('.modal');
+
+        removeResultsModal();
+        
+        resultModal.classList.add('modal__dialog');
+
+        if(answer == message.loading) {
+            const loading = document.createElement('img');
+
+            loading.src = answer;
+            loading.classList.add('img_loading');
+
+            resultModal.innerHTML = `
+            <div class="modal__content">
+            </div> 
+            `;
+
+            modal.append(resultModal);
+            resultModal.querySelector('.modal__content').append(loading);
+        } else {
+            resultModal.innerHTML = `
+            <div class="modal__content">
+                <div data-close class="modal__close">&times;</div>  
+                <div class="modal__title">${answer}</div>
+            </div> 
+            `;
+
+            modal.append(resultModal);
+
+        }
+        
+    }
+
+    const servicesCards = document.querySelectorAll('.block_info'),
+          modal = document.querySelector('.modal');
+    
+    addEventCloseModal(modal);
 
     servicesCards.forEach(card => {
-        card.addEventListener('mouseover', (e) => {
-            card.classList.add('focus');
+        card.addEventListener('click', () => {
+            const modal = document.querySelector('.modal'),
+                  title = modal.querySelector('.modal__title'),
+                  serviceTitle = card.querySelector('.name_price'),
+                  form = document.querySelector('.modal__content .form');
+
+            title.innerHTML = `
+            <div class="modal__title">
+                Are you sure that you want to order <br><span>${serviceTitle.textContent}</span> service?
+            </div>
+            `;
+            showModal(modal);
+            form.addEventListener('submit', (e) =>{
+                e.preventDefault();
+                send(form, serviceTitle.textContent);
+            });          
         });
-        card.addEventListener('mouseout', (e) => {
-            card.classList.remove('focus');
-        });
+
     });
+    
 
     // Обробка повідомлення
 
-    const form = document.querySelector('.form');
-
-    const message = {
-        loading: 'img/form/Rolling-1s-200px.svg',
-        success: 'Thank you. We will reply as soon as possible',
-        failure: 'Error',
-        voidInput: 'You haven`t  filled TEXTBOXES',
-        incorrectMail: 'Mail isn`t correct'
-    };
-    function postData(form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form),
-                  object = {};
-            let checkForm = true,
-                checkMail = false;
-
-            formData.forEach((value, key) => {
-                if(value == null || value == '') {
-                    checkForm = false;                  
-                }
-
-                if((key == "mail") && (checkForm == true)) {
-                    for(let i = 0; i<value.length; i++) {
-                        if(value[i] == '@') {
-                            checkMail = true;
-                            break;
-                        }
-                    }
-                }
-                
-                if((checkForm == true)) {
-                    if(key == "mail") {
-                        if(checkMail == true) {
-                            object[key] = value;
-                        }
-                    } else {
-                        object[key] = value;
-                    }                   
-                }
-            });
-            const statusMessage = document.createElement('div');
-            if((checkMail == true) && (checkForm == true)) {
-                
-                const loading = document.createElement('img');
-                loading.src = message.loading;
-                loading.classList.add('img_loading');
-                const modal = showModalThanks(loading, true);
-
-                fetch('server.php',{
-                    method:'POST',
-                    headers: {
-                        'Content-type': 'application/json; charset=utf-8'
-                    },
-                    body: JSON.stringify(object)
-                }).then(data => {
-                    console.log(data);
-                    modal.remove();
-                    showModalThanks(message.success);
-                }).catch(() => {
-                    showModalThanks(message.failure);
-                }).finally(() => form.reset());
-            } else {
-                if(checkForm == false) {
-                    showModalThanks(message.voidInput);
-                } else {
-                    showModalThanks(message.incorrectMail);
-                }
-                form.append(statusMessage);
-            }
-            
-        });
-    }
-
-    postData(form);
-
-     //Модальне вікно
-
-  
-
-     function showModalThanks(message, check = false) {
-        const modal = document.querySelector('.modal');
-        const thanksModal = document.createElement('div');
-
-        function showModal() {
-            modal.classList.remove('hide');
-            modal.classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeModal() {
-            modal.classList.remove('show');
-            modal.classList.add('hide');
-            document.body.style.overflow = '';
-        }
-        showModal();
-        thanksModal.classList.add('modal__dialog');
-
-        if(check == true) {
-            thanksModal.innerHTML = `
-            <div class="modal__content">
-                <div data-close class="modal__close">&times;</div>  
-            </div> 
-            `;
-            modal.append(thanksModal);
-            thanksModal.querySelector('.modal__content').append(message);
-            return thanksModal;
-        } else {
-            thanksModal.innerHTML = `
-            <div class="modal__content">
-                <div data-close class="modal__close">&times;</div>
-                <div class="modal__title">${message}</div>
-    
-            </div>       
-            `;
-             modal.addEventListener('click', (e) => {
-                 if(e.target == modal || e.target.getAttribute('data-close') == '' ) {
-                     closeModal();
-                     thanksModal.remove();
-                 }
-             });
-            modal.append(thanksModal);
-        }
-        
-    }
-
+    const form = document.querySelector('.send_main .form');
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        showModal(modal);
+        send(form);
+    });
 
      // Створення запису в галереї
 
@@ -755,3 +771,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
+const slides = document.querySelectorAll('.slider__item'),
+      prev = document.querySelector('.slider__control_left'),
+      next = document.querySelector('.slider__control_right'),
+      slidesWrapper = document.querySelector('.slider'),
+      slidesField = document.querySelector('.slider__wrapper'),
+      width = window.getComputedStyle(slidesWrapper).width;
+
+let slideIndex=1;
+let offset = 0;
+console.log(next);
+slidesField.style.width= `${25 * slides.length}%`;
+slidesField.style.display = 'flex';
+slidesField.style.transition = '0.5s all';
+
+slidesWrapper.style.overflow = 'hidden';
+
+slides.forEach(slide => {
+    slide.style.width = width;
+});
+
+next.addEventListener('click', () => {
+    if (offset == (+width.slice(0, width.length - 2)/3 )) {
+        offset = 0;
+    } else {
+        offset += (+width.slice(0, width.length - 2))/3; 
+    }
+
+    slidesField.style.transform = `translateX(-${offset}px)`;
+});
+
+prev.addEventListener('click', () => {
+    if (offset == 0) {
+        offset += (+width.slice(0, width.length - 2))/3;
+    } else {
+        offset -= (+width.slice(0, width.length - 2))/3;
+    }
+
+    slidesField.style.transform = `translateX(-${offset}px)`;
+});
+
